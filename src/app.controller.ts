@@ -24,7 +24,7 @@ export class AppController {
     return 'updated';
   }
 
-  @Delete()
+  @Delete(':id')
   deleteReportById() {
     return 'deleted';
   }
