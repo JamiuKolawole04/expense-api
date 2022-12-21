@@ -14,7 +14,7 @@ import {
 
 import { AppService } from './app.service';
 import { ReportType } from './data';
-import { CreateReportDto } from './dtos/report.dto';
+import { CreateReportDto, UpdateReportDto } from './dtos/report.dto';
 
 @Controller('api/v1/report/:type')
 export class AppController {
@@ -53,7 +53,7 @@ export class AppController {
   updateReportById(
     @Param('type', new ParseEnumPipe(ReportType)) type: string,
     @Param('id', ParseUUIDPipe) id: string,
-    @Body() body: { amount: number; source: string },
+    @Body() body: UpdateReportDto,
   ) {
     const reportType =
       type === 'income' ? ReportType.INCOME : ReportType.EXPENSE;

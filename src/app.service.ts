@@ -8,6 +8,11 @@ interface ReportData {
   source: string;
 }
 
+interface UpdateReportData {
+  amount: number;
+  source: string;
+}
+
 @Injectable()
 export class AppService {
   getAllReports(type: ReportType) {
@@ -41,7 +46,7 @@ export class AppService {
     return newReport;
   }
 
-  updateReport(type: ReportType, id: string, body: ReportData) {
+  updateReport(type: ReportType, id: string, body: UpdateReportData) {
     /**
      * personal logic
      *  return data.report.find(
