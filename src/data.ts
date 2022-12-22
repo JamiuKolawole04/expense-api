@@ -19,7 +19,7 @@ export const data: Data = {
     {
       id: 'uuid1',
       source: 'Salary',
-      amount: 20,
+      amount: 7500,
       created_At: new Date(),
       updated_At: new Date(),
       type: ReportType.INCOME,
